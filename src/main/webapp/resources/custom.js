@@ -68,8 +68,7 @@ function addKPacsToBody(body) {
         console.log(input.checked);
         if (input.checked) {
             let kpac = {
-                id: parseInt(input.id.replace(CHK_PREFIX, "")),
-                title: "random" + Math.random().toString(36).slice(-5) // titles must be different
+                id: parseInt(input.id.replace(CHK_PREFIX, ""))
             };
             kpacs.push(kpac);
         }

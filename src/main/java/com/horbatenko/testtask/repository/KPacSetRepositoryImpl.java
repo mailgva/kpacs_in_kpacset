@@ -43,7 +43,7 @@ public class KPacSetRepositoryImpl implements KPacSetRepository {
                 .addValue("id", kPacSet.getId())
                 .addValue("title", kPacSet.getTitle());
 
-        if (kPacSet.isNew()) {
+        if (kPacSet.getId() == null) {
             Number newId = insert.executeAndReturnKey(map);
             kPacSet.setId(newId.intValue());
         } else {

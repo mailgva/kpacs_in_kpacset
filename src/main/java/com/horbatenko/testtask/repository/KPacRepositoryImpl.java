@@ -44,7 +44,7 @@ public class KPacRepositoryImpl implements KPacRepository {
                 .addValue("title", kPac.getTitle())
                 .addValue("description", kPac.getDescription());
 
-        if (kPac.isNew()) {
+        if (kPac.getId() == null) {
             map.addValue("creation_date", LocalDate.now());
             Number newId = insert.executeAndReturnKey(map);
             kPac.setId(newId.intValue());

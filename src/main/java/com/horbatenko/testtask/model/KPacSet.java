@@ -10,7 +10,8 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class KPacSet extends AbstractBaseEntity {
+public class KPacSet {
+    private Integer id;
     private String title;
     private Set<KPac> kPacs = new HashSet<>();
 }
