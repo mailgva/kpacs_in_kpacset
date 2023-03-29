@@ -1,0 +1,12 @@
+name: test_task_k_pac
+packages:
+  - path: com.horbatenko.testtask.config
+    shallow: true
+  - path: com.horbatenko.testtask.controller
+    shallow: true
+  - path: com.horbatenko.testtask.model
+    shallow: true
+  - path: com.horbatenko.testtask.repository
+    shallow: true
+language: java
+appmap_dir: target/appmap
