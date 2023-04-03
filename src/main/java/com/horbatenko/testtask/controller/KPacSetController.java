@@ -47,4 +47,13 @@ public class KPacSetController {
         logger.debug("Create KPacSet with body: {}", kPacSet);
         return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(kPacSet));
     }
+
+    @PutMapping(value = "{id}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<KPacSet> updateKPacSet(@PathVariable("id") Integer id,
+                                                 @RequestBody KPacSet kPacSet) {
+        logger.debug("Update KPacSet by Id={} with body: {}", id, kPacSet);
+        kPacSet.setId(id);
+        repository.save(kPacSet);
+        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+    }
 }
